@@ -7,12 +7,12 @@ describe("Given a loadSongsActionCreator function", () => {
       const songs: Song[] = [
         {
           id: "1",
-          title: "Song 1",
+          name: "Song 1",
           band: "Band 1",
         },
         {
           id: "2",
-          title: "Song 2",
+          name: "Song 2",
           band: "Band 2",
         },
       ];
