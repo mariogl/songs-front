@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import SongsContextProvider from "../store/contexts/SongsContextProvider";
 
-const renderWithProviders = (component: JSX.Element, withRouter = false) => {
+const renderWithProviders = (component: JSX.Element) => {
   const wrapper = ({ children }: { children: JSX.Element | JSX.Element[] }) => (
     <SongsContextProvider>{children}</SongsContextProvider>
   );

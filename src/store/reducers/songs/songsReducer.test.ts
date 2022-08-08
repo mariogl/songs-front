@@ -29,4 +29,17 @@ describe("Given a songsReducer", () => {
       expect(result).toEqual(newSongs);
     });
   });
+
+  describe("When it receives an action of unknown type", () => {
+    test("Then it should return the previous state", () => {
+      const prevSongs: Song[] = [];
+      const action: any = {
+        type: "unknown",
+      };
+
+      const result = songsReducer(prevSongs, action);
+
+      expect(result).toEqual(prevSongs);
+    });
+  });
 });

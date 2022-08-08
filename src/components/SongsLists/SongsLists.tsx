@@ -8,8 +8,8 @@ const SongsLists = ({ songs }: SongsListsProps): JSX.Element => {
   return (
     <ul className="songs">
       {songs.map((song: Song) => (
-        <li key={song.id}>
-          <span>{song.title}</span>
+        <li className="song" key={song.id}>
+          <h2 className="song__title">{song.title}</h2>
         </li>
       ))}
     </ul>
