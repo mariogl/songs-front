@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Navigate, Route, Routes } from "react-router-dom";
+import { StyledContainer, StyledHeader } from "./App.styled";
+import Navigation from "./components/Navigation/Navigation/Navigation";
+import HomePage from "./pages/HomePage/HomePage";
 
-function App() {
+const App = (): JSX.Element => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyledContainer>
+      <StyledHeader className="main-header">
+        <h1>My Songs</h1>
+        <Navigation />
+      </StyledHeader>
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="/home" element={<HomePage />} />
+        </Routes>
+      </main>
+    </StyledContainer>
   );
-}
+};
 
 export default App;
