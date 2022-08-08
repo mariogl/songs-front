@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { StyledContainer, StyledHeader } from "./App.styled";
 import Navigation from "./components/Navigation/Navigation/Navigation";
 import HomePage from "./pages/HomePage/HomePage";
+import SongsListPage from "./pages/SongsListPage/SongsListPage";
 
 const App = (): JSX.Element => {
   return (
@@ -14,6 +15,7 @@ const App = (): JSX.Element => {
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<HomePage />} />
+          <Route path="/songs" element={<SongsListPage />} />
         </Routes>
       </main>
     </StyledContainer>

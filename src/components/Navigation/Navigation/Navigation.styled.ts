@@ -6,6 +6,10 @@ export const StyledLinks = styled.ul`
   padding: 0;
   gap: 10px;
 
+  a,
+  a:visited {
+    color: inherit;
+  }
   .active {
     font-weight: bold;
   }
